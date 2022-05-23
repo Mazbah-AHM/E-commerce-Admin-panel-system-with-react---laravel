@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
+
 import MasterLayout from './layouts/admin/MasterLayout';
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path='/admin/dashboard' element={<MasterLayout />} />
+          <Route path='/admin' name="Admin" render={(props) => <MasterLayout {...props} />} />
         </Routes>
       </Router>
     </div>
